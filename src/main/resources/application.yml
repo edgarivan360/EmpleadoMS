@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: test
+---
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  #contextPath: /empleado-ms
+  port: 8000
