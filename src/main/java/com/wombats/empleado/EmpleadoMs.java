@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan("com.wombats.empleado")
-@EnableJpaRepositories({"com.wombats.empleado.persistence.repositories"})
+@EnableJpaRepositories({"com.wombats.empleado.persistence.repository"})
 @EntityScan({"com.wombats.empleado.model"})
 public class EmpleadoMs extends SpringBootServletInitializer {
 
