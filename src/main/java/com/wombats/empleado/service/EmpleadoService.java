@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -21,7 +20,7 @@ public class EmpleadoService {
         EmpleadoEntity empleado = empleadoEntityRepository.findById(id)
                 .orElseThrow(() -> new NoSuchElementException(String.format("El empleado %d no existe", id)));
         return EmpleadoRespuesta
-                .builder()
+        		.builder()
                 .id(empleado.getId())
                 .nombreCompleto(new StringBuilder(empleado.getNombre()).append(" ")
                         .append(empleado.getApellidoPaterno()).append(" ")
